@@ -36,12 +36,6 @@ You can run the demo from the root of the Wysimark project directory:
 ```sh
 # React
 pnpm dev:react
-
-# Standalone
-pnpm dev:standalone
-
-# Vue
-pnpm dev:vue
 ```
 
 You can edit Wysimark code and the changes will update live in the demo without a build step. Updates will be hot reloaded; however, due to the way that the editor is cached for performance, in some instances you will need to reload the browser.

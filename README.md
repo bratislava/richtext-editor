@@ -9,8 +9,6 @@ Features tables, check lists, images, emojis and attachments.
 Wysimark has these integrations:
 
 - React: @wysimark/react
-- Vue: @wysimark/vue
-- JavaScript/TypeScript: @wysimark/standalone
 - jQuery: Future
 - Angular: Future
 

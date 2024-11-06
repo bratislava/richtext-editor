@@ -5,7 +5,11 @@ const BASE_TEMPLATE_PATH = "./templates/readme/README.md"
 const PACKAGES_DIR = "./packages"
 
 function concatenateReadmeForPackage(packageName: string): void {
-  const preamblePath = path.join(PACKAGES_DIR, packageName, "README_PREAMBLE.md")
+  const preamblePath = path.join(
+    PACKAGES_DIR,
+    packageName,
+    "README_PREAMBLE.md"
+  )
   const outputPath = path.join(PACKAGES_DIR, packageName, "README.md")
 
   // Ensure preamble file exists
@@ -28,6 +32,6 @@ function concatenateReadmeForPackage(packageName: string): void {
 }
 
 // Assuming all subdirectories under "packages" need a README generated
-const packages = ["react", "standalone", "vue"]
+const packages = ["react"]
 
 packages.forEach(concatenateReadmeForPackage)

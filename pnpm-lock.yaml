@@ -30,9 +30,6 @@ importers:
       husky:
         specifier: ^8.0.0
         version: 8.0.0
-      node-pty:
-        specifier: ^1.0.0
-        version: 1.0.0
       pinst:
         specifier: ^3.0.0
         version: 3.0.0
@@ -8823,10 +8820,6 @@ packages:
       thenify-all: 1.6.0
     dev: true
 
-  /nan@2.17.0:
-    resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==}
-    dev: true
-
   /nanoid@3.3.6:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -9050,13 +9043,6 @@ packages:
       lodash.get: 4.4.2
       mkdirp: 0.5.6
       resolve: 1.22.2
-    dev: true
-
-  /node-pty@1.0.0:
-    resolution: {integrity: sha512-wtBMWWS7dFZm/VgqElrTvtfMq4GzJ6+edFI0Y0zyzygUSZMgZdraDUMUhCIvkjhJjme15qWmbyJbtAx4ot4uZA==}
-    requiresBuild: true
-    dependencies:
-      nan: 2.17.0
     dev: true
 
   /node-releases@1.1.77:
