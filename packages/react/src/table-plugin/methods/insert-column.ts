@@ -20,7 +20,11 @@ export function insertColumn(
      * Insert a Column into `TableElement.columns` which is the same as the
      * value of the current column. This is the `alignment` of the column.
      */
-    nextColumns.splice(nextCellIndex, 0, columns[nextCellIndex])
+    if (nextCellIndex < columns.length) {
+      nextColumns.splice(nextCellIndex, 0, columns[nextCellIndex])
+    } else {
+      nextColumns.push({ align: "left" })
+    }
     Transforms.setNodes(editor, { columns: nextColumns }, { at: tablePath })
 
     /**

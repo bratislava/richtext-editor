@@ -6,6 +6,7 @@ import { parse } from "../../convert"
 
 function pasteMarkdown(editor: Editor, markdown: string) {
   const fragment = parse(markdown)
+  console.log("parsing")
   Transforms.insertNodes(editor, fragment)
 }
 

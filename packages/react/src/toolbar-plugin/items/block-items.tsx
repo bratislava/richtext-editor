@@ -3,12 +3,12 @@ import { MenuItemData } from "~/src/shared-overlays/types"
 import * as Icon from "../icons"
 
 const blockItems: MenuItemData[] = [
-  {
-    icon: Icon.H1,
-    title: "Heading 1",
-    hotkey: "super+1",
-    action: (editor) => editor.heading.convertHeading(1, false),
-  },
+  // {
+  //   icon: Icon.H1,
+  //   title: "Heading 1",
+  //   hotkey: "super+1",
+  //   action: (editor) => editor.heading.convertHeading(1, false),
+  // },
   {
     icon: Icon.H2,
     title: "Heading 2",

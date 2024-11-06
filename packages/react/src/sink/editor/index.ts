@@ -21,6 +21,7 @@ export function createWithSink<T extends ExtractedPluginSchema>(
      * Executes the plugin on the `editor` with every one of the
      * `pluginFunctions` to get the `pluginObject`
      */
+
     const plugins = pluginFns.map((plugin) =>
       plugin(editor, options, { createPolicy: (x) => x })
     )
