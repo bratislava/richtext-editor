@@ -16,6 +16,7 @@ type UploadImageFileSuccessEvent = UploadImageFileEvent & { url: string }
 export type UploadEditor = {
   upload: UploadMethods & {
     client?: Client
+    onUploadIconClick: () => void
     onUploadImageFile: (e: UploadImageFileEvent) => boolean
     onUploadFile: (e: UploadFileEvent) => boolean
     onUploadImageFileSuccess: (e: UploadImageFileSuccessEvent) => boolean
@@ -24,7 +25,9 @@ export type UploadEditor = {
   }
 }
 
-export type UploadOptions = { upload?: { authToken?: string } }
+export type UploadOptions = {
+  upload?: { authToken?: string; onUploadButtonClick?: () => void }
+}
 
 export type UploadPluginCustomTypes = {
   Name: "upload"
@@ -41,6 +44,11 @@ export const UploadPlugin = //({ authToken }: { authToken?: string }) =>
     const client = authToken ? createClient({ authToken }) : undefined
     editor.upload = {
       client,
+      onUploadIconClick:
+        options.upload?.onUploadButtonClick ||
+        (() => {
+          console.warn(`No onUploadButtonClick provided.`)
+        }),
       onUploadImageFile: () => {
         console.log("called onUploadImageFile")
         return false

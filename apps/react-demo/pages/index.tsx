@@ -13,6 +13,9 @@ export default function Page() {
     authToken: process.env.NEXT_PUBLIC_PORTIVE_AUTH_TOKEN,
     minHeight: 240,
     maxHeight: 720,
+    onUploadButtonClick: () => {
+      console.log("Upload button clicked")
+    },
   })
 
   const getMarkdown = useCallback(() => {
