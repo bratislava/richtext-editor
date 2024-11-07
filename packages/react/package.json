@@ -1,8 +1,8 @@
 {
-  "name": "@wysimark/react",
-  "version": "3.0.20",
+  "name": "@bratislava/richtext-editor",
+  "version": "3.1.0",
   "license": "MIT",
-  "author": "Sunny Hirai <thesunny@gmail.com>",
+  "author": "Bratislava",
   "main": ".dist/node/index.cjs.js",
   "module": ".dist/node/index.esm.js",
   "browser": ".dist/browser/index.cjs.js",
@@ -24,7 +24,7 @@
     "README.md",
     ".dist/"
   ],
-  "description": "A modern and clean rich text editor for React that supports 100% of CommonMark and GitHub Flavored Markdown.",
+  "description": "The customized fork of wysimark editor - A modern and clean rich text editor for React that supports 100% of CommonMark and GitHub Flavored Markdown.",
   "keywords": [
     "contenteditable",
     "commonmark",

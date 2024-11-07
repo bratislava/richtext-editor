@@ -1,6 +1,4 @@
-import { Editor } from "slate"
-
-export function createFullscreenMethods(editor: Editor) {
+export function createFullscreenMethods() {
   let isFullscreenMode = false
   return {
     toggleFullscreen: () => {

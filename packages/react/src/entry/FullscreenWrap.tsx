@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import clsx from "clsx"
+import { clsx } from "clsx"
 import { useEffect, useState } from "react"
 import { Editor } from "slate"
 
