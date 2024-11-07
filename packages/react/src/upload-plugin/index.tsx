@@ -44,11 +44,10 @@ export const UploadPlugin = //({ authToken }: { authToken?: string }) =>
     const client = authToken ? createClient({ authToken }) : undefined
     editor.upload = {
       client,
-      onUploadIconClick:
-        options.upload?.onUploadButtonClick ||
-        (() => {
-          console.warn(`No onUploadButtonClick provided.`)
-        }),
+      onUploadIconClick: () => {
+        console.log("called onUploadIconClick")
+        options.upload?.onUploadButtonClick?.()
+      },
       onUploadImageFile: () => {
         console.log("called onUploadImageFile")
         return false
