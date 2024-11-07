@@ -34,8 +34,8 @@ export const ToolbarPlugin = createPlugin<ToolbarPluginCustomTypes>(
       height: options.toolbar?.height,
       minHeight: options.toolbar?.minHeight,
       maxHeight: options.toolbar?.maxHeight,
-      showUploadButtons: options.toolbar?.showUploadButtons ?? true,
-      showCustomUploadButton: options.toolbar?.showCustomUploadButton ?? true,
+      showUploadButtons: options.toolbar?.showUploadButtons ?? false,
+      showCustomUploadButton: options.toolbar?.showCustomUploadButton ?? false,
     }
     return {
       name: "toolbar",
