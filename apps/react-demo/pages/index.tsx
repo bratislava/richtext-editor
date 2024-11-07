@@ -12,7 +12,8 @@ export default function Page() {
   const editor = useEditor({
     authToken: process.env.NEXT_PUBLIC_PORTIVE_AUTH_TOKEN,
     minHeight: 240,
-    maxHeight: 720,
+    height: 720,
+    maxHeight: 1220,
     onUploadButtonClick: () => {
       console.log("Upload button clicked")
     },
