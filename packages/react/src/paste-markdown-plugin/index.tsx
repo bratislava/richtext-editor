@@ -24,7 +24,6 @@ export const PasteMarkdownPlugin = createPlugin<PasteMarkdownPluginCustomTypes>(
       editor: {},
       editableProps: {
         onPaste(e) {
-          console.log("onPaste")
           const { types } = e.clipboardData
 
           const clipboardText = JSON.stringify(e.clipboardData.getData("text"))
