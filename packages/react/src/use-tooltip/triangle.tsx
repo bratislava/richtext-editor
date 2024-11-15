@@ -4,7 +4,7 @@ import { useRect } from "./tooltip"
 
 const $Triangle = styled("span")`
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   width: 0;
   height: 0;
   border-top: 0.375em solid transparent;
