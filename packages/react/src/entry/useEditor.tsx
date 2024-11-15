@@ -13,21 +13,24 @@ export function useEditor({
   height,
   minHeight,
   maxHeight,
+  onUploadButtonClick,
 }: {
   authToken?: string
   height?: string | number
   minHeight?: string | number
   maxHeight?: string | number
+  onUploadButtonClick?: () => void
 }): Editor & ReactEditor & WysimarkEditor {
   const [editor] = useState(() => {
     const editor = createEditor()
     const nextEditor = withSink(withReact(withHistory(editor)), {
-      upload: { authToken },
+      upload: { authToken, onUploadButtonClick },
       image: {},
       toolbar: {
         height,
         minHeight,
         maxHeight,
+        showCustomUploadButton: !!onUploadButtonClick,
         /**
          * If `authToken` is provided then show upload buttons.
          */

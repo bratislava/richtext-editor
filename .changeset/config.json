@@ -3,7 +3,7 @@
   "changelog": "@changesets/cli/changelog",
   "commit": true,
   "fixed": [],
-  "linked": [["@wysimark/react", "@wysimark/standalone", "@wysimark/vue"]],
+  "linked": [["@bratislava/wysimark-editor"]],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",

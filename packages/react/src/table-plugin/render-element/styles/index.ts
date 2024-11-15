@@ -71,3 +71,18 @@ export const $TableContent = styled("div")`
     font-size: 0.875em; /* 14px */
   }
 `
+
+export const $RemoveTableButton = styled("div")`
+  position: absolute;
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 25%;
+  cursor: pointer;
+  svg {
+    display: block;
+  }
+  color: rgba(0, 0, 0, 0.25);
+  &:hover {
+    color: firebrick;
+  }
+`

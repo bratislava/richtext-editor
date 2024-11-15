@@ -15,10 +15,10 @@ export const listItems: MenuItemData[] = [
     hotkey: "super+7",
     action: (editor) => editor.list.convertOrderedList(false),
   },
-  {
-    icon: Icon.ListCheck,
-    title: "Checklist",
-    hotkey: "super+9",
-    action: (editor) => editor.list.convertTaskList(false),
-  },
+  // {
+  //   icon: Icon.ListCheck,
+  //   title: "Checklist",
+  //   hotkey: "super+9",
+  //   action: (editor) => editor.list.convertTaskList(false),
+  // },
 ]

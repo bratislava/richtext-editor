@@ -79,7 +79,19 @@ export function deleteFragmentWithProtectedTypes(
    */
   Editor.withoutNormalizing(editor, () => {
     for (const range of reversedRanges) {
-      Transforms.delete(editor, { at: range })
+      const tableContentNodes = Editor.nodes(editor, {
+        at: range.anchor.path,
+        // mode defaults to "all", so this also searches the Editor's children
+        match: (node) => {
+          // @ts-ignore node has this type, but is not in the types
+          return node.type === "table-content"
+        },
+      })
+
+      for (const tableContentNode of tableContentNodes) {
+        Transforms.select(editor, tableContentNode[1])
+        Editor.insertFragment(editor, [{ text: "" }])
+      }
     }
     Transforms.collapse(editor, { edge: "start" })
   })

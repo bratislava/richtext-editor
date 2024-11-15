@@ -12,7 +12,11 @@ export default function Page() {
   const editor = useEditor({
     authToken: process.env.NEXT_PUBLIC_PORTIVE_AUTH_TOKEN,
     minHeight: 240,
-    maxHeight: 720,
+    height: 720,
+    maxHeight: 1220,
+    onUploadButtonClick: () => {
+      console.log("Upload button clicked")
+    },
   })
 
   const getMarkdown = useCallback(() => {
@@ -45,9 +49,6 @@ fdsfs`)
           React Src
         </a>
         <a href="/dist">Dist</a>
-        <a href="http://localhost:3733/">Standalone Dist</a>
-        <a href="http://localhost:3734/">Vue Src</a>
-        <a href="http://localhost:3734/dist">Vue Dist</a>H
       </div>
       <h1>Wysimark React Demo</h1>
       <p>

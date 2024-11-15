@@ -77,9 +77,6 @@ fdsfs`)
           React Src
         </a>
         <a href="/dist">Dist</a>
-        <a href="http://localhost:3733/">Standalone Dist</a>
-        <a href="http://localhost:3734/">Vue Src</a>
-        <a href="http://localhost:3734/dist">Vue Dist</a>
       </div>
       <h1>Wysimark React Demo</h1>
       <p>

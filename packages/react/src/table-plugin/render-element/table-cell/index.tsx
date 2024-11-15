@@ -1,10 +1,11 @@
 import { useContext } from "react"
-import { useSelected } from "slate-react"
+import { useSelected, useSlateStatic } from "slate-react"
 
+import { CrossIcon } from "~/src/list-plugin/render-element/list-icons"
 import { ConstrainedRenderElementProps } from "~/src/sink"
 
 import { TableCellElement } from "../../types"
-import { $TableCell } from "../styles"
+import { $RemoveTableButton, $TableCell } from "../styles"
 import { TableContext } from "../table-context"
 import { ColumnMenu } from "./column-menu"
 import { RowMenu } from "./row-menu"
@@ -17,6 +18,8 @@ export function TableCell({
 }: ConstrainedRenderElementProps<TableCellElement>) {
   const tableContext = useContext(TableContext)
   const selected = useSelected()
+  const editor = useSlateStatic()
+
   /**
    * table has slection and we are in the top left cell
    */
@@ -30,6 +33,10 @@ export function TableCell({
    * table has selection and we are in the top row
    */
   const showColumnMenu = tableContext.isSelected && element.y === 0
+
+  const isFirstTableCell =
+    tableContext.isSelected && element.x === 0 && element.y === 0
+
   return (
     <$TableCell
       className={selected ? "--selected" : ""}
@@ -41,6 +48,17 @@ export function TableCell({
       {showTableMenu ? <TableMenu /> : null}
       {showRowMenu ? <RowMenu cellElement={element} /> : null}
       {showColumnMenu ? <ColumnMenu cellElement={element} /> : null}
+      {isFirstTableCell ? (
+        <$RemoveTableButton
+          style={{
+            top: "-1.5rem",
+            left: "-1.5rem",
+          }}
+          onMouseDown={() => editor.tablePlugin.removeTable()}
+        >
+          <CrossIcon />
+        </$RemoveTableButton>
+      ) : null}
     </$TableCell>
   )
 }

@@ -1,8 +1,10 @@
 import { MenuItemData } from "~/src/shared-overlays"
+import {
+  AttachmentDialog,
+  ImageDialog,
+} from "~/src/toolbar-plugin/components/dialog/file-dialog"
 
 import { TableDialog } from "../components"
-import { EmojiDialog } from "../components/dialog/emoji-dialog"
-import { AttachmentDialog, ImageDialog } from "../components/dialog/file-dialog"
 import * as Icon from "../icons"
 
 export const dialogItems: MenuItemData[] = [
@@ -11,6 +13,12 @@ export const dialogItems: MenuItemData[] = [
     title: "Insert Table",
     more: true,
     Component: TableDialog,
+  },
+  {
+    icon: Icon.Image,
+    title: "Insert Image",
+    action: (editor) => editor.upload.onUploadIconClick(),
+    show: (editor) => editor.toolbar.showCustomUploadButton ?? false,
   },
   {
     icon: Icon.Image,
@@ -26,12 +34,12 @@ export const dialogItems: MenuItemData[] = [
     Component: AttachmentDialog,
     show: (editor) => editor.toolbar.showUploadButtons ?? false,
   },
-  {
-    icon: Icon.Emoji,
-    title: "Insert Emoji",
-    more: true,
-    Component: EmojiDialog,
-  },
+  // {
+  //   icon: Icon.Emoji,
+  //   title: "Insert Emoji",
+  //   more: true,
+  //   Component: EmojiDialog,
+  // },
 ]
 
 export const expandedDialogItems: MenuItemData[] = dialogItems

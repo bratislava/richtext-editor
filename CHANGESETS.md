@@ -31,11 +31,3 @@ Something like:
   }
 }
 ```
-
-## Linked Packages
-
-`@wysimark/react`, `@wysimark/standalone` and `@wysimark/vue` are linked.
-
-This means that if they receive a new version number, they get the same version number between the packages.
-
-<https://github.com/changesets/changesets/blob/main/docs/linked-packages.md>

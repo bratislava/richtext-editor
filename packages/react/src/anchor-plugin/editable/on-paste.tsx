@@ -7,8 +7,6 @@ export function onPaste(
   const clipboardData = e.clipboardData
   const { types } = clipboardData
 
-  console.log(clipboardData.getData("text/html"))
-
   /**
    * We don't want to handle it if it's not just plain text. If it is
    * plain text, it will have only one type and it will be "text/plain".
