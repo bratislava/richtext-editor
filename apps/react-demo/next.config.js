@@ -1,9 +1,6 @@
-const dotenv = require("dotenv")
-
-let env
-
 /**
  * Environment Variables
+ * If in need to use environment variables, you can uncomment the code below.
  *
  * If `process.env.DOTENV` is provided, use it to load a `doetenv` file.
  *
@@ -19,23 +16,24 @@ let env
  * - Syntax highlighting works when file ends in `.env`
  */
 
-if (typeof process.env.DOTENV === "string") {
-  const data = dotenv.config({ path: process.env.DOTENV })
-  if (data.error) {
-    throw new Error(data.error)
-  }
-  env = data.parsed
-} else if (process.env.NODE_ENV === "development") {
-  throw new Error(
-    `Please define a DOTENV env var to a dotenv file when in development`
-  )
-}
+// if (typeof process.env.DOTENV === "string") {
+//   const data = dotenv.config({ path: process.env.DOTENV })
+//   if (data.error) {
+//     throw new Error(data.error)
+//   }
+//   env = data.parsed
+// } else if (process.env.NODE_ENV === "development") {
+// throw new Error(
+//   `Please define a DOTENV env var to a dotenv file when in development`
+// )
+// }
+
+// const dotenv = require("dotenv")
 
 /**
  * Sets `process.env` in Next.js
  */
 module.exports = {
-  env,
   experimental: { externalDir: true },
   /**
    * Add this code to enable importing of file content as a string.

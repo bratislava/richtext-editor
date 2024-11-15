@@ -1,4 +1,4 @@
-import { Editable, useEditor } from "@wysimark/react"
+import { Editable, useEditor } from "@bratislava/wysimark-editor"
 import { useState } from "react"
 
 export default function Page() {

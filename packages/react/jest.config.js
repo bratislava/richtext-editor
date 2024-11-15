@@ -1,3 +1,3 @@
-const config = require("jest-config/jest.config.js")
+const config = require("@bratislava-wysimark/jest-config/jest.config.js")
 
 module.exports = config

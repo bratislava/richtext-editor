@@ -6,7 +6,7 @@ export function useRect(dest: HTMLElement): DOMRect {
 
 const $Tooltip = styled("div")`
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
@@ -42,8 +42,8 @@ export function Tooltip({
   return (
     <$Tooltip
       style={{
-        left: rect.left,
-        top: `calc(${rect.top}px - 2em)`,
+        left: `calc(${rect.right}px + 0.3em)`,
+        top: `calc(${rect.top + rect.height / 2}px  - 0.75em)`,
       }}
     >
       {title}

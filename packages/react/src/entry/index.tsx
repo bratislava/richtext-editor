@@ -3,6 +3,8 @@ import { useCallback, useRef } from "react"
 import { Descendant, Editor, Element, Transforms } from "slate"
 import { ReactEditor, RenderLeafProps, Slate } from "slate-react"
 
+import { FullscreenWrap } from "~/src/entry/FullscreenWrap"
+
 import { parse, serialize } from "../convert"
 import { SinkEditable } from "./SinkEditable"
 
@@ -187,20 +189,22 @@ export function Editable({
   // ])
 
   return (
-    <Slate
-      editor={editor}
-      /* NOTE: This is the initial value even though it is named value */
-      value={initialValueRef.current}
-      onChange={onSlateChange}
-    >
-      <SinkEditable
-        renderLeaf={renderLeaf}
-        onMouseDown={onSinkeEditableMouseDown}
-        onBlur={onBlur}
-        placeholder={placeholder}
-        className={className}
-        style={style}
-      />
-    </Slate>
+    <FullscreenWrap editor={editor}>
+      <Slate
+        editor={editor}
+        /* NOTE: This is the initial value even though it is named value */
+        value={initialValueRef.current}
+        onChange={onSlateChange}
+      >
+        <SinkEditable
+          renderLeaf={renderLeaf}
+          onMouseDown={onSinkeEditableMouseDown}
+          onBlur={onBlur}
+          placeholder={placeholder}
+          className={className}
+          style={style}
+        />
+      </Slate>
+    </FullscreenWrap>
   )
 }
