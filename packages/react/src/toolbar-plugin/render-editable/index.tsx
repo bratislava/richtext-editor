@@ -64,9 +64,10 @@ export function renderEditable({ attributes, Editable }: RenderEditableProps) {
         ref={outerContainerRef}
         className={clsx({ "--focused": focused })}
         style={{
-          height: editor.toolbar.height,
           minHeight: editor.toolbar.minHeight,
-          maxHeight: editor.toolbar.maxHeight,
+          ...(editor.fullscreen.isFullscreen
+            ? { height: "100%" }
+            : { maxHeight: editor.toolbar.maxHeight }),
         }}
         onClick={onClickOuterContainer}
       >
@@ -74,7 +75,17 @@ export function renderEditable({ attributes, Editable }: RenderEditableProps) {
         <Editable
           as={$Editable}
           {...attributes}
-          style={{ overflowY: "auto" }}
+          style={{
+            overflowY: "auto",
+            minHeight: editor.toolbar.minHeight,
+            ...(editor.fullscreen.isFullscreen
+              ? { flex: 1 }
+              : {
+                  // editor - toolbar = editable height
+                  height: `calc(${editor.toolbar.height}px - 3em)`,
+                  resize: "vertical",
+                }),
+          }}
         />
       </$OuterContainer>
     </Layers>

@@ -1,4 +1,5 @@
 import { MenuItemData } from "~/src/shared-overlays"
+import { otherItems } from "~/src/toolbar-plugin/items/other-items"
 
 import { blockDropdownItem } from "./block-items"
 import { compactDialogItems, expandedDialogItems } from "./dialogItems"
@@ -25,6 +26,8 @@ export const largeItems: MenuItemData[] = [
   ...dropdownItems,
   "divider",
   ...expandedDialogItems,
+  "divider",
+  ...otherItems,
 ]
 
 export const mediumItems: MenuItemData[] = [
@@ -36,6 +39,8 @@ export const mediumItems: MenuItemData[] = [
   ...dropdownItems,
   "divider",
   ...compactDialogItems,
+  "divider",
+  ...otherItems,
 ]
 
 export const smallItems: MenuItemData[] = [
@@ -47,6 +52,8 @@ export const smallItems: MenuItemData[] = [
   ...dropdownItems,
   "divider",
   ...compactDialogItems,
+  "divider",
+  ...otherItems,
 ]
 
 export const initialItems: MenuItemData[] = [blockDropdownItem, "divider"]

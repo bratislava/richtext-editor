@@ -8,6 +8,7 @@ import { BlockQuotePlugin } from "~/src/block-quote-plugin"
 import { CodeBlockPlugin } from "~/src/code-block-plugin"
 import { CollapsibleParagraphPlugin } from "~/src/collapsible-paragraph-plugin"
 import { ConvertElementPlugin } from "~/src/convert-element-plugin"
+import { FullscreenPlugin } from "~/src/fullscreen-plugin"
 import { HeadingPlugin } from "~/src/heading-plugin"
 import { HorizontalRulePlugin } from "~/src/horizontal-rule-plugin"
 import { ImagePlugin } from "~/src/image-plugin"
@@ -28,6 +29,7 @@ import { PlaceholderPlugin } from "../placeholder-plugin"
 import { WysimarkEditor } from "./types"
 
 export const plugins = [
+  FullscreenPlugin,
   PasteMarkdownPlugin,
   ConvertElementPlugin,
   AnchorPlugin,
