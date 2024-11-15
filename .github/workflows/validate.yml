@@ -21,8 +21,5 @@ jobs:
 
       - run: npm ci
 
-      - name: Typescript check
-        run: npm run lint:tsc
-
-      - name: ESlint check
-        run: npm run lint:eslint
+      - name: Validate typescript and ESLint
+        run: npm run lint
