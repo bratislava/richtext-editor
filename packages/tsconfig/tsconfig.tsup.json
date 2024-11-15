@@ -1,5 +1,5 @@
 {
-  "extends": "tsconfig/tsconfig.base.json",
+  "extends": "@bratislava-wysimark/tsconfig/tsconfig.base.json",
   "compilerOptions": {
     /**
      * Setting jsx to "react-jsx" lets TypeScript know that you're using the new

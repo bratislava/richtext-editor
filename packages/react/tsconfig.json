@@ -3,7 +3,7 @@
  * the config file for Next.js
  */
 {
-  "extends": "tsconfig/tsconfig.custom.json",
+  "extends": "@bratislava-wysimark/tsconfig/tsconfig.custom.json",
   "compilerOptions": {
     "rootDir": ".",
     "baseUrl": ".",
