@@ -22,11 +22,7 @@ jobs:
       - run: npm ci
 
       - name: Typescript check
-        run: npm run lint
+        run: npm run lint:tsc
 
       - name: ESlint check
-        uses: sibiraj-s/action-eslint@v2
-        with:
-          eslint-args: "--ignore-path=.gitignore --quiet"
-          extensions: "md,ts,tsx"
-          annotations: true
+        run: npm run lint:eslint
