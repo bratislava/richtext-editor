@@ -119,7 +119,7 @@
     "lint:tsc": "tsc --build ./ --force",
     "-- next": "# NextJs",
     "open": "open -a 'google chrome' http://localhost:3732",
-    "start:local": "DOTENV=.env/local.env next dev -p 3732",
+    "start:local": "next dev -p 3732",
     "-- plop": "# Plop: specify ts-node https://github.com/plopjs/plop/issues/192",
     "plop": "TS_NODE_PROJECT=tsconfig.ts-node.json plop --plopfile plop/plopfile.ts",
     "-- release": "# publish to npm",

@@ -26,9 +26,9 @@ if (typeof process.env.DOTENV === "string") {
   }
   env = data.parsed
 } else if (process.env.NODE_ENV === "development") {
-  throw new Error(
-    `Please define a DOTENV env var to a dotenv file when in development`
-  )
+  // throw new Error(
+  //   `Please define a DOTENV env var to a dotenv file when in development`
+  // )
 }
 
 /**
