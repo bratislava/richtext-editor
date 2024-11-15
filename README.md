@@ -8,7 +8,7 @@ Features tables, check lists, images, emojis and attachments.
 
 Wysimark has these integrations:
 
-- React: @wysimark/react
+- React: @bratislava/wysimark-editor
 - jQuery: Future
 - Angular: Future
 

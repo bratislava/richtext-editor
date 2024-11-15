@@ -1,24 +1,23 @@
 {
-  "name": "react-demo",
+  "name": "@bratislava-wysimark/demo",
   "private": true,
-  "packageManager": "pnpm@8.6.6",
   "devDependencies": {
     "@types/react": ">=17.x",
     "@types/react-dom": ">=17.x",
     "concurrently": "^7.2",
     "eslint": "^8.4.1",
-    "eslint-config-custom": "*",
+    "@bratislava-wysimark/eslint-config-custom": "*",
     "prettier": "^2.8",
     "raw-loader": "^4.0.2",
     "ts-node": "^10.9.1",
-    "tsconfig": "workspace:*",
+    "@bratislava-wysimark/tsconfig": "*",
     "typescript": "^4.9.4"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@wysimark/react": "workspace:*",
+    "@bratislava/wysimark-editor": "*",
     "next": "~13.4.19",
     "react": ">=17.x",
     "react-dom": ">=17.x",
@@ -26,11 +25,11 @@
   },
   "scripts": {
     "-- fix": "# fix syntax",
-    "fix": "pnpm fix:prettier && pnpm fix:eslint",
-    "fix:eslint": "pnpm lint:eslint --fix",
-    "fix:prettier": "pnpm lint:prettier --write",
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "fix:eslint": "npm run lint:eslint --fix",
+    "fix:prettier": "npm run lint:prettier --write",
     "-- lint": "# lint syntax",
-    "lint": "concurrently 'pnpm lint:prettier' 'pnpm lint:eslint' 'pnpm lint:tsc'",
+    "lint": "concurrently 'npm run lint:prettier' 'npm run lint:eslint' 'npm run lint:tsc'",
     "lint:prettier": "prettier --check \"**/*.{css,md,js,jsx,json,ts,tsx}\" --ignore-path '../../.prettierignore'",
     "lint:eslint": "eslint .",
     "lint:tsc": "tsc --build ./ --force",
@@ -42,5 +41,5 @@
     "preset": "ts-node --project $HOME/presets/tsconfig.ts-node.json $HOME/presets/bin/index.ts",
     "-- end": "# end"
   },
-  "version": null
+  "version": "1.0.0"
 }

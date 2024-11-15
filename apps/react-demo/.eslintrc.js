@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ["custom"],
+  extends: ["@bratislava-wysimark/eslint-config-custom"],
 }

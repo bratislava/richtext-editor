@@ -12,7 +12,7 @@ const $Container = styled("div")`
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 200000;
+    z-index: 20000;
   }
 `
 
@@ -27,9 +27,8 @@ export const FullscreenWrap = ({ children, editor }: Props) => {
   useEffect(() => {
     editor.fullscreen.toggleFullscreen = () => {
       setIsFullscreen((prev) => {
-        const next = !prev
-        editor.fullscreen.isFullscreen = next
-        return next
+        editor.fullscreen.isFullscreen = !prev
+        return !prev
       })
     }
   }, [])
