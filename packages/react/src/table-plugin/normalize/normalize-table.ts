@@ -18,10 +18,10 @@ export function normalizeTableIndexes(
         operations.push(() => {
           try {
             Transforms.setNodes(editor, { x, y }, { at: [...tablePath, y, x] })
-          } catch (e) {
+          } catch (error) {
             console.warn(
               `Failed to transform cell at ${[...tablePath, y, x]}:`,
-              e
+              error
             )
           }
         })
@@ -33,7 +33,7 @@ export function normalizeTableIndexes(
   // Execute all operations in a single batch
   if (operations.length > 0) {
     Editor.withoutNormalizing(editor, () => {
-      operations.forEach((op) => op())
+      operations.forEach((operation) => operation())
     })
   }
 
