@@ -115,7 +115,7 @@ export function convertToBlockImage(
       Transforms.removeNodes(editor, { at: [...parentPath, 0] })
     }
     /**
-     * Now lift the node, but if the first sibling was removed, we need to account fo rthe fact that the index of the image changed.
+     * Now lift the node, but if the first sibling was removed, we need to account for the fact that the index of the image changed.
      */
     Transforms.liftNodes(editor, {
       at: [...parentPath, removeFirstSibling ? index - 1 : index],
