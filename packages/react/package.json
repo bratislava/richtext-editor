@@ -1,6 +1,6 @@
 {
   "name": "@bratislava/wysimark-editor",
-  "version": "3.2.0",
+  "version": "3.2.2",
   "license": "MIT",
   "author": "Bratislava",
   "main": ".dist/node/index.cjs.js",

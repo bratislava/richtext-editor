@@ -4,9 +4,9 @@ import { renderEditable } from "./render-editable"
 
 export type ToolbarEditor = {
   toolbar: {
-    height?: string | number
-    minHeight?: string | number
-    maxHeight?: string | number
+    height?: number
+    minHeight?: number
+    maxHeight?: number
     showUploadButtons?: boolean
     showCustomUploadButton?: boolean
   }
@@ -14,9 +14,9 @@ export type ToolbarEditor = {
 
 export type ToolbarOptions = {
   toolbar: {
-    height?: string | number
-    minHeight?: string | number
-    maxHeight?: string | number
+    height?: number
+    minHeight?: number
+    maxHeight?: number
     showUploadButtons?: boolean
     showCustomUploadButton?: boolean
   }

@@ -16,9 +16,9 @@ export function useEditor({
   onUploadButtonClick,
 }: {
   authToken?: string
-  height?: string | number
-  minHeight?: string | number
-  maxHeight?: string | number
+  height?: number
+  minHeight?: number
+  maxHeight?: number
   onUploadButtonClick?: () => void
 }): Editor & ReactEditor & WysimarkEditor {
   const [editor] = useState(() => {
