@@ -34,7 +34,7 @@
     "lint:prettier": "turbo lint:prettier",
     "lint:tsc": "turbo lint:tsc",
     "ready": "turbo ready",
-    "release": "is-git-clean && turbo run lint test:once && changeset version && changeset publish",
+    "release": "turbo run lint test:once && changeset version && changeset publish",
     "test": "turbo test:once",
     "test:watch": "npm run --workspace @bratislava/wysimark-editor test:watch"
   }
